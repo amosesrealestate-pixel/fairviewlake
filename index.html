@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capture Fairview Lake Contest Registration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#4a7a3d; --green-dark:#3c6531; --sage:#eef3ec;
+    --ink:#262626; --muted:#666; --line:#dfe5dc;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:#f7f8f6;font-family:Inter,Arial,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:640px;margin:0 auto;padding:28px 18px 48px}
+  .card{background:#fff;border-radius:20px;box-shadow:0 6px 30px rgba(40,60,35,.08);overflow:hidden}
+  .hero{background:var(--sage);padding:34px 28px 28px;text-align:center;border-bottom:1px solid var(--line)}
+  .pill{display:inline-block;background:#fff;border-radius:999px;padding:9px 22px;
+        letter-spacing:.28em;font-size:12px;font-weight:600;color:var(--green);box-shadow:0 2px 10px rgba(0,0,0,.05)}
+  h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;color:var(--green);
+     font-size:clamp(34px,7vw,46px);line-height:1.05;margin:18px 0 10px}
+  h1 em{font-weight:500}
+  .sub{color:#444;font-size:16px;line-height:1.55;margin:0 auto;max-width:480px}
+  .sub b{color:var(--ink)}
+  form{padding:26px 28px 30px}
+  .section{font-size:12px;letter-spacing:.2em;font-weight:600;color:var(--green);
+           margin:22px 0 12px;text-transform:uppercase}
+  .section:first-child{margin-top:0}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:520px){.grid{grid-template-columns:1fr}}
+  label{display:block;font-size:14px;font-weight:500;margin-bottom:6px}
+  label .req{color:var(--green)}
+  label .opt{color:#999;font-weight:400}
+  input,select{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid var(--line);
+               border-radius:12px;background:#fff;color:var(--ink);transition:border-color .15s, box-shadow .15s}
+  input:focus,select:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(74,122,61,.15)}
+  .field{margin-bottom:14px}
+  .check{display:flex;gap:12px;align-items:flex-start;background:var(--sage);border-radius:12px;padding:14px 16px;margin-top:8px}
+  .check input{width:20px;height:20px;margin-top:2px;accent-color:var(--green);flex-shrink:0}
+  .check span{font-size:14px;line-height:1.5;color:#333}
+  button{width:100%;margin-top:20px;background:var(--green);color:#fff;border:0;border-radius:999px;
+         font:600 16px Inter,Arial,sans-serif;letter-spacing:.04em;padding:16px;cursor:pointer;transition:background .15s}
+  button:hover{background:var(--green-dark)}
+  button:disabled{opacity:.6;cursor:wait}
+  .err{display:none;color:#a33;background:#fbeeee;border-radius:10px;padding:10px 14px;font-size:14px;margin-top:14px}
+  .success{display:none;padding:34px 28px 38px;text-align:center}
+  .code-box{background:var(--sage);border-radius:16px;padding:22px;margin:20px auto;max-width:340px}
+  .code-label{font-size:12px;letter-spacing:.24em;color:var(--green);font-weight:600}
+  .code{font-size:40px;font-weight:600;letter-spacing:.06em;margin-top:6px}
+  .steps{text-align:left;max-width:420px;margin:0 auto;color:#444;line-height:1.6;font-size:15px}
+  .foot{border-top:1px solid var(--line);padding:18px 28px;font-size:13px;color:var(--muted);line-height:1.6;text-align:center}
+  .foot b{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <div class="hero">
+      <div class="pill">CAPTURE FAIRVIEW LAKE</div>
+      <h1>Agent Contest <em>Registration</em></h1>
+      <p class="sub">This form enters you in the <b>Shoot. Share. Win $250.</b> photo &amp; video contest. You'll get your entry code by email right away. Deadline: <b>December 31</b>.</p>
+    </div>
+
+    <form id="f" novalidate>
+      <div class="section">Agent information</div>
+      <div class="field">
+        <label for="name">Full name <span class="req">*</span></label>
+        <input id="name" name="name" autocomplete="name" required>
+      </div>
+      <div class="grid">
+        <div class="field">
+          <label for="email">Email <span class="req">*</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="phone">Mobile phone <span class="req">*</span></label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="field">
+          <label for="brokerage">Brokerage <span class="req">*</span></label>
+          <input id="brokerage" name="brokerage" autocomplete="organization" required>
+        </div>
+        <div class="field">
+          <label for="license">GA license # <span class="opt">(optional)</span></label>
+          <input id="license" name="license">
+        </div>
+      </div>
+
+      <div class="section">Your buyer &amp; visit</div>
+      <div class="grid">
+        <div class="field">
+          <label for="buyers">Buyer name(s) <span class="opt">(optional)</span></label>
+          <input id="buyers" name="buyers">
+        </div>
+        <div class="field">
+          <label for="buyerCount"># of buyers bringing</label>
+          <select id="buyerCount" name="buyerCount">
+            <option>1</option><option>2</option><option>3</option><option>4+</option><option>Just me for now</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="visit">When are you visiting? <span class="req">*</span></label>
+        <select id="visit" name="visit" required>
+          <option value="">Select…</option>
+          <option>This week</option>
+          <option>Next week</option>
+          <option>Later in December</option>
+          <option>Already visited</option>
+        </select>
+      </div>
+      <div class="grid">
+        <div class="field">
+          <label for="social">Instagram / TikTok handle <span class="opt">(optional)</span></label>
+          <input id="social" name="social" placeholder="@yourhandle">
+        </div>
+        <div class="field">
+          <label for="heard">How did you hear about it?</label>
+          <select id="heard" name="heard">
+            <option value="">Select…</option>
+            <option>Instagram</option><option>Facebook</option><option>TikTok</option>
+            <option>LinkedIn</option><option>Flyer</option><option>Text from Ashley</option><option>Another agent</option>
+            <option>At the sales center</option><option>Other</option>
+          </select>
+        </div>
+      </div>
+
+      <label class="check">
+        <input type="checkbox" id="agree" name="agree">
+        <span>I'll post original photos or video of Fairview Lake, tag <b>@iamashleymoses</b> or invite her as a Collab, and add <b>#fairviewlake</b> and my entry code by December 31. Only registered entries qualify.</span>
+      </label>
+
+      <div class="err" id="err"></div>
+      <button type="submit" id="btn">Register &amp; get my entry code</button>
+    </form>
+
+    <div class="success" id="ok">
+      <div class="pill">YOU'RE IN</div>
+      <h1>Thank you, <em id="okName">friend</em>!</h1>
+      <div class="code-box">
+        <div class="code-label">YOUR ENTRY CODE</div>
+        <div class="code" id="okCode">FL-000</div>
+      </div>
+      <div class="steps">
+        <p>A confirmation email with your code is on its way. Here's what's next:</p>
+        <ol>
+          <li>Tour the community and model home with your buyer</li>
+          <li>Shoot original photos or video, your style</li>
+          <li>Post it, tag <b>@iamashleymoses</b> or invite me as a Collab, and add <b>#fairviewlake</b> + your code</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="foot">
+      <b>Ashley Moses</b> · 470-655-9286<br>
+      Fairview Lake Townhomes · 7024 Old Bridge Lane, Conyers, GA 30013<br>
+      Equal Housing Opportunity
+    </div>
+  </div>
+</div>
+
+<script>
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbzVidlmi1jwhsCnIrLChbfBYh2dlB3SQ64jm9mbzhqYW5aSRIV4rW7J1FCG4hmdsKARJA/exec';
+  var f = document.getElementById('f');
+  var btn = document.getElementById('btn');
+  var err = document.getElementById('err');
+
+  function showErr(msg){ err.textContent = msg; err.style.display = 'block'; btn.disabled = false; btn.textContent = 'Register & get my entry code'; }
+
+  function done(res, name){
+    f.style.display = 'none';
+    document.getElementById('okName').textContent = (name || 'friend').split(' ')[0];
+    document.getElementById('okCode').textContent = res.code;
+    document.getElementById('ok').style.display = 'block';
+    window.scrollTo(0,0);
+  }
+
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    err.style.display = 'none';
+    var d = {};
+    ['name','email','phone','brokerage','license','buyers','buyerCount','visit','social','heard']
+      .forEach(function(k){ d[k] = document.getElementById(k).value.trim(); });
+    d.agree = document.getElementById('agree').checked;
+
+    if(!d.name || !d.email || !d.phone || !d.brokerage || !d.visit) return showErr('Please fill in all required fields.');
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) return showErr('Please enter a valid email address.');
+    if(!d.agree) return showErr('Please check the box to agree to the contest rules.');
+
+    btn.disabled = true; btn.textContent = 'Registering…';
+
+    fetch(ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(d)
+    })
+      .then(function(r){ return r.json(); })
+      .then(function(res){
+        if (res && res.ok) { done(res, d.name); }
+        else { showErr((res && res.error) || 'Something went wrong. Please try again.'); }
+      })
+      .catch(function(){ showErr('Connection problem. Please try again, or text Ashley at 470-655-9286.'); });
+  });
+</script>
+</body>
+</html>
